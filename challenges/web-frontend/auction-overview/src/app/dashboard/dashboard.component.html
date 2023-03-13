@@ -1,0 +1,12 @@
+<h1>Auctions</h1>
+<div class="cards">
+  <div class="card" *ngFor="let item of dataSource">
+    <img [src]="item.associatedVehicle.vehicleImages[0].url" alt="Profile picture" height="200" width="200">
+    <p>{{ item.associatedVehicle.ez }} | {{ item.associatedVehicle.mileageInKm}} | {{
+      item.associatedVehicle.fuelType }} | {{item.associatedVehicle.transmission }}
+    </p>
+    <p><b>Auction price at</b> {{ item.currentHighestBidValueNet }}€</p>
+    <p><b>Auction ends in</b> {{ item.formattedTime }}</p>
+    <p><b>Are you highest bidder?</b> {{ item.amIHighestBidder ? 'Yes' : 'No' }}</p>
+  </div>
+</div>

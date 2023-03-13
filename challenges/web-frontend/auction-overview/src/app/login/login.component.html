@@ -1,0 +1,15 @@
+<div class="login-form">
+  <h1>Login</h1>
+  <form (submit)="login()" class="form-group">
+    <label>
+      Buyer Email:
+      <input type="email" [(ngModel)]="email" name="email"/>
+    </label>
+    <label>
+      Buyer Password:
+      <input type="password" [(ngModel)]="password" name="password"/>
+    </label>
+    <button type="submit">Log in</button>
+  </form>
+  <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+</div>
